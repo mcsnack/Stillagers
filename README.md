@@ -1,16 +1,19 @@
-# Stillagers
-Minecraft Datapack to limit villager movement and lag in trading halls
+# Stillagers — Minecraft 26.3 fork
 
-If you name tag a villager with "Stillager" or "stillager" they will stop moving and path finding altogether. This is done by setting the ?NoAI? tag of the villager to 1. This typically eliminates restocks, so I have a function to manually restock all trades at 8:00 AM and 2:00 PM. This is mostly consistent with vanilla behavior, villagers restock twice a day at slightly random times, but their 4 phases of the day (work, gather, wander, and sleep) can be divided into 4 segments which is the logic behind the restock times.
+A fork of [Stillagers by surfrock66](https://github.com/surfrock66/Stillagers), updated for Minecraft Java Edition 26.3.
 
-If you want to disable this, you tag the villager with "Moveager" or "moveager" and the name disappears and their AI is restored.
+The 26.3 data pack format is 121.0. This fork updates the pack metadata and extends the modern function-layout overlay to that format. The functions and gameplay behavior remain the same as upstream.
 
-This is particularly useful for trading halls where villagers are locked in 1×1 spaces. In my test world where I have a trading hall with ~150 villagers, it took the tps from 15 to 20, the MSPT from ~65 to ~50, and the FPS to ~30 to ~60 (where I have it capped). This has tremendous lag reduction impacts without the headache of doing double-carpet tricks, and is completely optional so villagers in mob farms or those that are naturally spawned are completely unaffected; this is opt-in.
+## Use
 
-The only mobs impacted by this are villagers. If you name another mob "Stillager" or "Moveager" it will be unaffected.
+1. Put the `stillagers` folder (or the contents of `Stillagers-26.3.zip`) in the world's `datapacks` directory.
+2. Run `/reload`.
+3. Name-tag a villager `Stillager` or `stillager` to stop its AI and pathfinding. Its trades are manually restocked at 08:00 and 14:00 Minecraft time.
+4. Name-tag it `Moveager` or `moveager` to restore its AI.
+5. Run `/function stillagers:uninstall` to remove the pack's effects and scheduled function.
 
-Special thanks to the VanillaTweaks team; this was made using their "SilenceMe" and "Track Raw Statistics" datapacks as templates.
+Back up the world before installing. Since AI is disabled, villagers will not use workstations or restock through normal AI; the pack resets up to ten trade uses twice per Minecraft day.
 
-This is my first datapack, so feedback is welcome.
+## Attribution and license
 
-
+Based on Stillagers by Surfrock66. Original work and this fork are licensed under the GNU Affero General Public License v3 or later; see [LICENSE](LICENSE).

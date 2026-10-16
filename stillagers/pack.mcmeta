@@ -1,15 +1,18 @@
 {
   "pack": {
-    "pack_format": 107.1,
+    "pack_format": 121.0,
     "min_format": 4,
-    "max_format": [107, 1],
+    "max_format": [
+      121,
+      0
+    ],
     "supported_formats": {
       "min_inclusive": 4,
-      "max_inclusive": 107.1
+      "max_inclusive": 121.0
     },
     "description": [
       {
-        "text": "Disable Villager Movement",
+        "text": "Disable Villager Movement (Minecraft 26.3)",
         "color": "gold"
       },
       {
@@ -50,22 +53,30 @@
       {
         "directory": "v71-94.1",
         "min_format": 71,
-        "max_format": [94, 1],
+        "max_format": [
+          94,
+          1
+        ],
         "formats": {
           "min_inclusive": 71,
           "max_inclusive": 94.1
         }
       },
       {
-        "directory": "v101.1-107.1",
-        "min_format": [101, 1],
-        "max_format": 9999999,
+        "directory": "v101.1-121.0",
+        "min_format": [
+          101,
+          1
+        ],
+        "max_format": [
+          121,
+          0
+        ],
         "formats": {
           "min_inclusive": 101.1,
-          "max_inclusive": 9999999
+          "max_inclusive": 121.0
         }
       }
     ]
   }
 }
-
